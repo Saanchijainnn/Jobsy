@@ -1,0 +1,1 @@
+mongodb+srv://saanchi2315_db_user:wwdWvuuVAhtVtP9n@jobsy-cluster.jjosyku.mongodb.net/Jobsy

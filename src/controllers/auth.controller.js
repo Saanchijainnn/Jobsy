@@ -15,3 +15,13 @@ async function registerUserController(req, res) {
             message: "Please provide username, email and password"
         })
     }}
+
+    const isUserAlreadyExists = await userModel.findOne({
+        $or: [ { username }, { email } ]
+    })
+
+    if (isUserAlreadyExists) {
+        return res.status(400).json({
+            message: "Account already exists with this email address or username"
+        })
+    }
